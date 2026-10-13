@@ -2,8 +2,8 @@
 // Uses the local backend when the page is served from localhost,
 // and PROD_API_BASE everywhere else (e.g. on Vercel).
 
-// TODO: after deploying the backend to Render, put its URL here (no trailing slash).
-const PROD_API_BASE = "https://YOUR-SERVICE-NAME.onrender.com";
+// render link
+const PROD_API_BASE = "https://bella-vista-api.onrender.com";
 
 const IS_LOCAL = window.location.hostname === "localhost" ||
                  window.location.hostname === "127.0.0.1";
