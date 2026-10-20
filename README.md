@@ -1,16 +1,22 @@
-# Bella Vista – AI Voice Receptionist
+# Voxa – AI Voice Receptionist
 
-A voice and text AI receptionist for a restaurant. Guests talk (or type) to "Aria" to ask about hours, the menu and location, book a table, or request a callback. Staff manage everything from an admin dashboard.
+Voxa is a voice and text AI receptionist for restaurants. Guests talk (or type) to "Aria" to ask about hours, the menu and location, book a table, or request a callback. Staff manage everything from an admin dashboard. The demo is set up for a fictional restaurant, Bella Vista in Prishtina.
 
-Built as my capstone project.
+Built as our final-year capstone project by Marius Madan, Erbin Fejzullahu and Rrezon Koshi.
 
-**Live demo:** <YOUR-VERCEL-URL>
-**Admin panel:** <YOUR-VERCEL-URL>/admin.html (demo password: `<DEMO-ADMIN-PASSWORD>`)
-**Demo video:** <YOUR-VIDEO-LINK>
+**Live demo:** https://bella-vista-ai-receptionist-fronten.vercel.app
+**Admin panel:** https://bella-vista-ai-receptionist-fronten.vercel.app/admin.html (demo password: `admin23`)
+**Demo video:** https://youtu.be/HvnJ0P43aMw
 
-> The backend runs on a free hosting tier and goes to sleep when idle. If the first message takes 30–60 seconds, that's the server waking up. After that it's fast.
+> The backend runs on a free hosting tier and goes to sleep when idle. If the first message takes 30–60 seconds, that's the server waking up. After that it's fast. The admin panel is a public demo, so please don't enter real personal data.
 
-<!-- TODO: add 2–3 screenshots here (chat page, admin overview, reservations table) -->
+## Screenshots
+
+| Voice and text chat | Admin overview |
+|---|---|
+| ![Chat: booking a table for 8 and requesting a callback](docs/screenshots/chat.png) | ![Admin overview with calendar](docs/screenshots/admin-overview.png) |
+| **Reservations** | **Callback requests** |
+| ![Reservations table](docs/screenshots/reservations.png) | ![Callback requests](docs/screenshots/callbacks.png) |
 
 ---
 
@@ -71,8 +77,8 @@ The model doesn't invent availability. It has to call tools (`get_business_info`
 ### 1. Install
 
 ```bash
-git clone <this-repo-url>
-cd SeniorDev-main
+git clone https://github.com/Marius2308/bella-vista-ai-receptionist.git
+cd bella-vista-ai-receptionist
 
 python -m venv venv
 
@@ -208,7 +214,7 @@ The backend keeps chat sessions and admin tokens in memory, so it's meant to run
 ## Project structure
 
 ```
-SeniorDev-main/
+bella-vista-ai-receptionist/
 ├── backend/
 │   ├── main.py        # FastAPI app, routes, admin auth
 │   ├── assistant.py   # Conversation memory + OpenAI tool-calling loop
@@ -236,6 +242,10 @@ SeniorDev-main/
 - The restaurant's details (hours, address, tables) are hard-coded in `backend/tools.py`, and the admin dashboard repeats the opening hours in `admin.js`. It's a single-restaurant demo, not multi-tenant.
 - Server logs include chat messages and phone numbers, which would need to be removed or masked in a real deployment.
 
-## Author
+## Team
 
-Marius Madan
+Final-year capstone project by:
+
+- Marius Madan ([LinkedIn](https://www.linkedin.com/in/marius-madan))
+- Erbin Fejzullahu ([LinkedIn](https://www.linkedin.com/in/erblinfejzullahu))
+- Rrezon Koshi ([LinkedIn](https://www.linkedin.com/in/rrezon-koshi))
